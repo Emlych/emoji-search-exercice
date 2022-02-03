@@ -7,9 +7,8 @@ const Main = () => {
   const handleSearch = (event) => {
     setsearch(event.target.value);
   };
-  // transform emoji object into
+
   const searchedEmoji = emoji.filter((item) => {
-    console.log(item);
     return item.keywords.includes(search);
   });
   return (
@@ -23,10 +22,11 @@ const Main = () => {
         />
       </div>
       <div>You are searching {search}.</div>
+      {console.log(searchedEmoji)}
       <div className="emoji-list">
-        {/* on parcourt emoji et on n'affiche que les emojis dont le keyword correspond */}
-
-        {searchedEmoji}
+        {searchedEmoji.map((element, index) => (
+          <div key={index}>{element.symbol}</div>
+        ))}
       </div>
     </div>
   );
