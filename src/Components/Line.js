@@ -1,10 +1,12 @@
 import React from "react";
 
-const Line = ({ searchedEmoji }) => {
+const Line = ({ searchedEmoji, copyEmoji }) => {
   return (
     <div className="emoji-list">
       {searchedEmoji.map((element, index) => (
-        <div key={index}>{element.symbol}</div>
+        <div className="emoji-line" onClick={copyEmoji} key={index}>
+          {element.symbol} {element.title}
+        </div>
       ))}
     </div>
   );

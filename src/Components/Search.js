@@ -14,7 +14,6 @@ const Search = (props) => {
           placeholder="what emoji are you looking for?"
         />
       </div>
-      <div>You are searching {props.search}.</div>
     </div>
   );
 };

@@ -25,11 +25,16 @@ h1 {
   justify-content: center;
   align-items: center;
 }
+.search-bar {
+  min-width: auto;
+}
+
 .search-bar input {
   background-color: #f8efef;
   border: 1px solid #dcc8c8;
   border-radius: 3px;
   padding: 18px 27px;
+  box-sizing: border-box;
 }
 .emoji-list {
   width: 80%;
@@ -42,4 +47,8 @@ h1 {
   border: 1px solid #dcc8c8;
   box-sizing: border-box;
   border-radius: 3px;
+}
+.emoji-line:hover {
+  cursor: pointer;
+  background-color: #e5e5e5;
 }
