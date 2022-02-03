@@ -1,6 +1,6 @@
 import React from "react";
 
-const Line = ({ searchedEmoji, copyEmoji }) => {
+const Line = ({ searchedEmoji, copyEmoji, symbol }) => {
   return (
     <div className="emoji-list">
       {searchedEmoji.map((element, index) => (

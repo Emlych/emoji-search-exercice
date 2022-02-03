@@ -20,7 +20,7 @@ const Main = () => {
     setSelectedEmoji(event.target.value);
     await console.log(
       "i get ===>",
-      navigator.clipboard.writeText(selectedEmoji.title)
+      navigator.clipboard.writeText(selectedEmoji.symbol)
     );
   };
 
