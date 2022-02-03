@@ -18,7 +18,8 @@ h1 {
 }
 
 /* Main */
-.main {
+.main,
+.search {
   display: flex;
   flex-direction: column;
   justify-content: center;
