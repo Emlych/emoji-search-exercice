@@ -7,9 +7,10 @@ const Main = () => {
   const handleSearch = (event) => {
     setsearch(event.target.value);
   };
+  // transform emoji object into
   const searchedEmoji = emoji.filter((item) => {
     console.log(item);
-    return item.symbol.includes(search);
+    return item.keywords.includes(search);
   });
   return (
     <div className="main">
