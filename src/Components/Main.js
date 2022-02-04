@@ -22,7 +22,7 @@ const Main = () => {
 
   // Copy emoji to clipboard
   const copyEmoji = (element) => {
-    console.log("i get ===>", navigator.clipboard.writeText(element.symbol));
+    navigator.clipboard.writeText(element.symbol);
   };
 
   return (
