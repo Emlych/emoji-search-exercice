@@ -15,13 +15,8 @@ const Main = () => {
   });
 
   // Copy emoji to clipboard
-  const [selectedEmoji, setSelectedEmoji] = useState("");
-  const copyEmoji = async (event) => {
-    setSelectedEmoji(event.target.value);
-    await console.log(
-      "i get ===>",
-      navigator.clipboard.writeText(selectedEmoji.symbol)
-    );
+  const copyEmoji = (element) => {
+    console.log("i get ===>", navigator.clipboard.writeText(element));
   };
 
   return (
