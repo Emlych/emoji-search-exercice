@@ -6,7 +6,7 @@ const Line = ({ searchedEmoji, copyEmoji }) => {
       {searchedEmoji.map((element, index) => (
         <div
           className="emoji-line"
-          onClick={() => copyEmoji(element.symbol)}
+          onClick={() => copyEmoji(element)}
           key={index}
         >
           {element.symbol} {element.title}

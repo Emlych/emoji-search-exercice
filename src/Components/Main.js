@@ -5,18 +5,24 @@ import emoji from "../assets/emojiList.json";
 import { useState } from "react";
 
 const Main = () => {
+  //Limit number of emojis displayed (issu de la correction)
+  const [results, setresults] = useState(emoji.slice(0, 20));
+
   // Filter emojis by keywords entered in search bar
   const [search, setsearch] = useState("");
   const handleSearch = (event) => {
     setsearch(event.target.value);
   };
-  const searchedEmoji = emoji.filter((item) => {
-    return item.keywords.includes(search);
-  });
+  const searchedEmoji = emoji
+    .filter((item) => {
+      console.log(typeof item.keywords.includes(search)); //ça me rend un boolean. Je comprends pas
+      return item.keywords.includes(search);
+    })
+    .slice(0, 20);
 
   // Copy emoji to clipboard
   const copyEmoji = (element) => {
-    console.log("i get ===>", navigator.clipboard.writeText(element));
+    console.log("i get ===>", navigator.clipboard.writeText(element.symbol));
   };
 
   return (
