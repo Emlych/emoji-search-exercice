@@ -5,9 +5,6 @@ import emoji from "../assets/emojiList.json";
 import { useState } from "react";
 
 const Main = () => {
-  //Limit number of emojis displayed (issu de la correction)
-  const [results, setresults] = useState(emoji.slice(0, 20));
-
   // Filter emojis by keywords entered in search bar
   const [search, setsearch] = useState("");
   const handleSearch = (event) => {
@@ -15,7 +12,7 @@ const Main = () => {
   };
   const searchedEmoji = emoji
     .filter((item) => {
-      console.log(typeof item.keywords.includes(search)); //ça me rend un boolean. Je comprends pas
+      console.log(typeof item.keywords.includes(search));
       return item.keywords.includes(search);
     })
     .slice(0, 20);
